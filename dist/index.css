@@ -6674,6 +6674,10 @@ div .bunner__bg {
 }
 
 @media (max-width: 900px) {
+  .intro .intro-dec {
+    display: none;
+  }
+
   .intro-title * {
     font-size: 40px;
     font-weight: 500;
