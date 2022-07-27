@@ -9005,7 +9005,7 @@ div .bunner__bg {
 
   .toys__button {
     background: transparent;
-    background-image: url('../src/assets/img/toys/button.svg');
+    background-image: url('../img/toys/button.svg');
     background-repeat: no-repeat;
     background-size: 99% 114%;
     border-radius: 0;
