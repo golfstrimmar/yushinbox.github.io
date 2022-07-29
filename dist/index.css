@@ -6560,6 +6560,7 @@ div .bunner__bg {
   .about .about__block--second {
     right: 5px;
     top: 356px;
+    align-items: flex-end;
   }
 
   .about .about__block--second .about-block__norm {
