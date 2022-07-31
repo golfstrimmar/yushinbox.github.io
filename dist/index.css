@@ -2893,6 +2893,25 @@ th {
   src: url(691e180a654a8711e7ae.ttf);
 }
 
+@font-face {
+  font-family: Inter;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 700;
+  src: url(092764ba8c80d217a720.eot);
+  src: url(c01b2dd734d86f013352.woff);
+  src: url(e99e01f99331bddd344b.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fd04d0fa5ce59d517260.woff);
+  src: url(fd272b9e3ca9b73890cb.ttf);
+}
+
 .slider__item {
   min-height: 300px;
   position: relative;
@@ -3800,13 +3819,40 @@ th {
   width: 234px;
 }
 
-.Politic .Politic__title,
-.Politic p {
-  font-family: Inter;
+.Politic {
+  border-radius: 30px;
+}
+
+.Politic .Politic__body {
+  padding: 35px;
+}
+
+.Politic .Politic__title {
   font-size: 18px;
+  padding: 0 0 18px;
+}
+
+.Politic .Politic__block-title,
+.Politic .Politic__title {
+  color: #000;
+  font-family: Inter;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
+}
+
+.Politic .Politic__block-title,
+.Politic p {
+  font-size: 12px;
+  padding: 8px 0 0;
+}
+
+.Politic p {
+  color: #000;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 @media (min-width: 901px) and (max-width: 1024px) {
@@ -4372,6 +4418,10 @@ th {
 }
 
 @media (max-width: 900px) {
+  .Politic .Politic__body {
+    padding: 48px 20px;
+  }
+
   .Oder {
     border-radius: 18px;
     -ms-grid-columns: 1fr;
@@ -4834,6 +4884,14 @@ th {
   .Call input[type=radio]:checked+label,
   .Call input[type=radio]:not(:checked)+label {
     padding-left: 11px !important;
+  }
+
+  .Call input[type=checkbox]:checked+label:after,
+  .Call input[type=checkbox]:not(:checked)+label:after {
+    height: 4px;
+    left: -3px;
+    top: 7px;
+    width: 7px;
   }
 
   .Thanks {
@@ -7581,9 +7639,6 @@ div .bunner__bg {
 }
 
 .slider1 .slider__item {
-  border-radius: 40px;
-  -webkit-filter: drop-shadow(0 4px 60px rgba(0, 0, 0, .12));
-  filter: drop-shadow(0 4px 60px rgba(0, 0, 0, .12));
   height: 500px;
   position: relative;
 }
@@ -7599,9 +7654,6 @@ div .bunner__bg {
 }
 
 .slider1 .slider-full .slider__item {
-  border-radius: 40px;
-  -webkit-filter: drop-shadow(0 4px 60px rgba(0, 0, 0, .12));
-  filter: drop-shadow(0 4px 60px rgba(0, 0, 0, .12));
   height: 500px;
   overflow: hidden;
 }
@@ -9541,6 +9593,7 @@ div .bunner__bg {
 }
 
 .slider-rew-slide__body {
+  background: #181818;
   border-radius: 34px;
   height: 444px !important;
   max-width: 426px;
@@ -9550,14 +9603,14 @@ div .bunner__bg {
 }
 
 .slider-rew-slide__body:after {
-  background-color: #181818;
+  background: #181818;
   border-radius: 34px;
   content: "";
   height: 87%;
   left: 50%;
   opacity: .45;
   position: absolute;
-  top: 78px;
+  top: 75px;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -9617,6 +9670,11 @@ div .bunner__bg {
   width: 345px;
 }
 
+.rew .slider__item {
+  min-height: 461px;
+  position: relative;
+}
+
 @media (min-width: 901px) and (max-width: 1024px) {
   .rew__body {
     -ms-grid-columns: 501px 1764px;
@@ -9642,14 +9700,6 @@ div .bunner__bg {
 }
 
 @media (max-width: 900px) {
-  .Call input[type="checkbox"]:checked + label::after,
-  .Call input[type="checkbox"]:not(:checked) + label::after {
-    height: 4px;
-    left: -3px;
-    top: 7px;
-    width: 7px;
-  }
-
   .rew__body {
     display: block;
     margin: 74px 0 0;
@@ -9925,26 +9975,6 @@ div .bunner__bg {
 }
 
 @media (max-width: 900px) {
-  .dop_footer {
-    margin: 64px auto 22px;
-  }
-
-  .footer__body {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    justify-items: center;
-    padding: 41px 15px;
-    position: relative;
-  }
-
   .footer__pay {
     display: none;
   }
@@ -9996,6 +10026,9 @@ div .bunner__bg {
     -ms-flex-order: -1;
     order: -1;
     text-align: center;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
   }
 
   .footer__cheap {
@@ -10019,20 +10052,179 @@ div .bunner__bg {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer__pol:hover {
+    text-shadow: 0 0 5px #fb1f1d;
+  }
+
+  .dop_footer {
+    margin: 73px auto 17px;
+  }
+
+  .dop_footer .footer__body {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-items: center;
+    padding: 37px 33px;
+    position: relative;
+  }
+
+  .dop_footer .footer__logo {
+    max-width: 254px;
+    width: 100%;
+  }
+
+  .dop_footer .logo-group {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .dop_footer .logo-group__logo {
+    height: 33px;
+    margin: 0 0 5px -5px;
+    width: 140px;
+  }
+
+  .dop_footer .logo-group__descr {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: .001em;
+    line-height: 13px;
+    margin: 0 -4px 0 0;
+  }
+
+  .dop_footer .info__phone {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .dop_footer .footer__data span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 6px 0 0;
+    text-transform: none;
+  }
+
+  .dop_footer .footer__politic {
+    padding: 5px 0 0;
+  }
+
+  .dop_footer .footer__politic p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .dop_footer .footer__pol {
+    display: block;
+    letter-spacing: -.05em;
+    margin: -19px 0 0;
+    margin: -15px 0 0;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    text-align: center;
+  }
+
+  .dop_footer .footer__rules {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 74px 0 0;
+    text-align: center;
+  }
+
+  .dop_footer .footer__cheap {
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    top: 229px;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    width: 40px;
   }
 }
 
-.example {
-  display: -ms-grid;
-  display: grid;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-  background: -o-linear-gradient(top, white, black);
-  background: linear-gradient(to bottom, white, black);
+@media (max-width: 319px) {
+  .bunner .bunner-button,
+  .bunner .bunner-button-group {
+    width: 100%;
+  }
+
+  .about .galSlider .s2 .slider-arrow-prev {
+    left: 217px !important;
+  }
+
+  .about .galSlider .s2 .slider-arrow-next {
+    right: 217px !important;
+  }
+
+  .intro__img {
+    height: 375px !important;
+    left: 50%;
+    top: 241px !important;
+    -webkit-transform: translate(-50%) !important;
+    -ms-transform: translate(-50%) !important;
+    transform: translate(-50%) !important;
+    width: 267px !important;
+    z-index: -1;
+  }
+
+  .size .size__img {
+    height: 322px !important;
+    left: 50%;
+    right: auto;
+    top: 370px !important;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 250px !important;
+  }
+
+  .toys__button {
+    margin: 20px auto 0;
+    max-width: 269px !important;
+    overflow: visible !important;
+    position: relative;
+    width: 100% !important;
+  }
+
+  .toys__button .imgs {
+    display: block;
+    height: 83%;
+    left: 0;
+    max-width: 100%;
+    top: 9px;
+    width: 100%;
+  }
+
+  .del__img {
+    height: 440px !important;
+    right: 50%;
+    top: 120px !important;
+    width: 488px !important;
+  }
 }
