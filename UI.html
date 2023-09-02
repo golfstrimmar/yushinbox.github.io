@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ui</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <main class="inner">
+      <div style="clear: both; height: 20px; "></div>
+      <p>-buttons-</p>
+      <button class="create-anzahl__fertig btn-success but-wave" type="submit" value="Готово">Готово</button>
+      <div style="clear: both; height: 20px; "></div>
+      <button class="btn-blue" type="button">Удалить номер из списка</button>
+      <div style="clear: both; height: 20px; "></div>
+      <button class="btn btn--empty submit-button" type="submit" name="send">Отправить</button>
+      <div style="clear: both; height: 20px; "></div>
+      <p>-inputs-</p>
+      <div class="text-field">
+        <input id="1" type="text" name="1" value="" placeholder=" Denzel Washington">
+        <label class="text-field__label" for="1">Имя Фамилия</label><span>Поле обязательно для заполнения</span>
+      </div>
+      <div style="clear: both; height: 50px; "></div>
+      <div class="text-field">
+        <input class="input_invalid" id="firstname" type="text" name="firstname" value="" placeholder=" Denzel Washington">
+        <label class="text-field__label" for="firstname">.input_invalid</label><span>Поле обязательно для заполнения</span>
+      </div>
+      <div style="clear: both; height: 50px; "></div>
+      <div class="text-field">
+        <input class="input_valid" id="firstname" type="text" name="firstname" value="Джек Безз" placeholder=" Denzel Washington">
+        <label class="text-field__label" for="firstname">.input_valid</label><span>Спасибо за предоствленную информацию!</span>
+      </div>
+      <div style="clear: both; height: 50px; "></div>
+      <textarea id="4" name="4" row="20" placeholder="Введите текст"></textarea>
+      <div style="clear: both; height: 50px; "></div>
+      <p>-checkbox-</p>
+      <div class="fildset-checkbox">
+        <div class="form-check">
+          <input id="5" type="checkbox">
+          <label for="5">Любимое место</label>
+        </div>
+        <div class="form-check">
+          <input id="6" type="checkbox">
+          <label for="6">Месторасположение</label>
+        </div>
+        <div class="form-check">
+          <input id="7" type="checkbox">
+          <label for="7">Гость торжественного события</label>
+        </div>
+        <div class="form-check">
+          <input id="8" type="checkbox">
+          <label for="8">Корпоративные мероприятия</label>
+        </div>
+        <div class="form-check">
+          <input id="9" type="checkbox">
+          <label for="9">СПА комплекс</label>
+        </div>
+      </div>
+      <div style="clear: both; height: 20px; "></div>
+      <p>-radio-</p>
+      <fildset class="fildset-radio">
+        <div class="form-check">
+          <input type="radio" id="10" name="a" val="16-25" checked>
+          <label for="10"> от 16-25</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="11" name="a" val="26-35">
+          <label for="11"> от 26-35</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="12" name="a" val="36-45">
+          <label for="12"> 36-45</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="13" name="a" val="55">
+          <label for="13"> от 45 и старше</label>
+        </div>
+      </fildset>
+      <div style="clear: both; height: 20px; "></div>
+      <p>-radio-svg-</p>
+      <fildset class="fildset-radio fildset-radio--sex">
+        <div class="form-check">
+          <input type="radio" id="14" name="s" val="man">
+          <label for="14"> Мужчина</label>
+          <svg>
+            <use xlink:href="#Union"></use>
+          </svg>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="15" name="s" val="frau">
+          <label for="15"> Женщина</label>
+          <svg>
+            <use xlink:href="#Union"></use>
+          </svg>
+        </div>
+      </fildset>
+      <div style="clear: both; height: 20px; "></div>
+      <p>-radio--tiers-</p>
+      <div class="fildset-radio fildset-radio--tiers">
+        <input type="radio" id="tieresyes" name="tieres" val="yes" checked>
+        <label for="tieresyes"> Да</label><span>/</span>
+        <input type="radio" id="tieresnot" name="tieres" val="not">
+        <label for="tieresnot"> Нет</label>
+      </div>
+      <div style="clear: both; height: 20px; "></div>
+      <p>-a-</p><a href="#!">+7 (961)511-66-14</a>
+      <div style="clear: both; height: 50px; "></div>
+    </main>
+    <div class="hidden"><?xml version="1.0" encoding="utf-8"?><svg viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>:root>svg{display:none}:root>svg:target{display:block}</style><svg fill="none" viewBox="0 0 26 25" id="Star-1" xmlns="http://www.w3.org/2000/svg"><path d="M11.616 1.393c.435-.942 1.774-.942 2.208 0l2.764 5.993c.177.384.541.648.961.698l6.553.777c1.03.122 1.444 1.396.683 2.1l-4.845 4.48c-.31.288-.45.715-.367 1.13l1.286 6.473c.202 1.017-.881 1.804-1.787 1.298l-5.758-3.224a1.216 1.216 0 00-1.188 0l-5.758 3.224c-.906.506-1.989-.28-1.786-1.298l1.286-6.473a1.216 1.216 0 00-.367-1.13l-4.845-4.48c-.762-.704-.348-1.978.682-2.1l6.553-.777c.42-.05.784-.314.961-.698l2.764-5.993z" fill="#D9D9D9"/></svg><svg fill="none" viewBox="0 0 26 24" id="Star-2" xmlns="http://www.w3.org/2000/svg"><path d="M11.616.834c.435-.942 1.774-.942 2.208 0l2.764 5.992c.177.384.541.648.961.698l6.553.777c1.03.122 1.444 1.396.683 2.1l-4.845 4.48c-.31.288-.45.716-.367 1.13l1.286 6.473c.202 1.018-.881 1.805-1.787 1.298l-5.758-3.224a1.216 1.216 0 00-1.188 0l-5.758 3.224c-.906.507-1.989-.28-1.786-1.298l1.286-6.473a1.215 1.215 0 00-.367-1.13l-4.845-4.48c-.762-.704-.348-1.978.682-2.1l6.553-.777c.42-.05.784-.314.961-.698L11.616.834z" fill="#FFB802"/></svg><svg fill="none" viewBox="0 0 20 14" id="Union" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.39 2.795L16.902.308 8.264 8.947 3.29 3.973.803 6.46l7.461 7.461 2.488-2.487 8.638-8.639z" fill="#006B36"/></svg><svg fill="none" viewBox="0 0 12 6" id="arrow-down" xmlns="http://www.w3.org/2000/svg"><path d="M6 5.618L11.46.19H.54L6 5.618z" fill="#4B4B4B"/></svg></svg></div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
