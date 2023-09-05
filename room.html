@@ -43,7 +43,7 @@
             <h2>Пожалуйста, заполните анкету</h2>
           </div>
           <div class="book-section">
-            <forma class="book-section-form">
+            <form class="book-section-form" action="#" name="book-form">
               <div class="book-section-form__field">
                 <div class="text-block">
                   <div class="text-field">
@@ -52,6 +52,7 @@
                   </div>
                 </div>
                 <div class="text-block">
+                  <input id="date-in" type="hidden" name="date-in">
                   <div class="form-field">
                     <div class="_check" id="check-in"></div>
                     <div class="form-field__area-svg">
@@ -60,6 +61,7 @@
                       </svg>
                     </div>
                   </div>
+                  <input id="date-out" type="hidden" name="date-out">
                   <div class="form-field">
                     <div class="_check" id="check-out"></div>
                     <div class="form-field__area-svg">
@@ -70,14 +72,15 @@
                   </div>
                   <div class="form-field form-field--select">
                     <div class="select">
-                      <button class="dropdown-button">
-                        <p>Место проживания *</p><span> </span>
+                      <div class="dropdown-button">
+                        <p>Место проживания *</p>
+                        <input type="hidden" name="place" value=""><span></span>
                         <div class="form-field__area-svg">
                           <svg>
                             <use xlink:href="#arrow-down"></use>
                           </svg>
                         </div>
-                      </button>
+                      </div>
                       <ul class="dropdown-list">
                         <li class="dropdown-list__item" data-value="коттеджи 2-х местные">коттеджи 2-х местные</li>
                         <li class="dropdown-list__item" data-value="дом Лесника">дом Лесника</li>
@@ -260,15 +263,15 @@
                 <div class="book-section-form-line book-section-form-line--tiers">
                   <p>Имеет ли для Вас значение возможность посещение клуба с вашими питомцами?</p>
                   <fildset class="fildset-radio fildset-radio--tiers">
-                    <input type="radio" id="tieresyes" name="tieres" val="yes" checked>
+                    <input type="radio" id="tieresyes" name="tieres" value="yes" checked>
                     <label for="tieresyes"> Да</label><span>/</span>
-                    <input type="radio" id="tieresnot" name="tieres" val="not">
+                    <input type="radio" id="tieresnot" name="tieres" value="not">
                     <label for="tieresnot"> Нет</label>
                   </fildset>
                 </div>
                 <div class="book-section-form-line book-section-form-line--text">
                   <p>Ваши предложения / пожелания</p>
-                  <textarea id="form-line-1" name="form-line" row="20" placeholder="Введите текст"></textarea>
+                  <textarea id="form-line-1" name="form-line-1" row="20" placeholder="Введите текст"></textarea>
                 </div>
               </div>
               <div class="book-section-form__field book-section-form__field--info">
@@ -394,7 +397,7 @@
                 </div>
                 <div class="book-section-form-line book-section-form-line--text">
                   <p>Ваши предложения / пожелания</p>
-                  <textarea id="form-line-2" name="form-line" placeholder="Введите текст"></textarea>
+                  <textarea id="form-line-2" name="form-line-2" placeholder="Введите текст"></textarea>
                 </div>
               </div>
               <div class="book-section-form__field book-section-form__field--info">
@@ -520,7 +523,7 @@
                 </div>
                 <div class="book-section-form-line book-section-form-line--text">
                   <p>Ваши предложения / пожелания</p>
-                  <textarea id="form-line-3" name="form-line" placeholder="Введите текст"></textarea>
+                  <textarea id="form-line-3" name="form-line-3" placeholder="Введите текст"></textarea>
                 </div>
               </div>
               <div class="book-section-form__field book-section-form__field--info">
@@ -531,41 +534,41 @@
                   <div class="book-section-form-column">
                     <div class="fildset-checkbox">
                       <div class="form-check">
-                        <input id="cb1" type="checkbox">
+                        <input id="cb1" type="checkbox" name="cb1">
                         <label for="cb1">Любимое место</label>
                       </div>
                       <div class="form-check">
-                        <input id="cb2" type="checkbox">
+                        <input id="cb2" type="checkbox" name="cb2">
                         <label for="cb2">Месторасположение</label>
                       </div>
                       <div class="form-check">
-                        <input id="cb3" type="checkbox">
+                        <input id="cb3" type="checkbox" name="cb3">
                         <label for="cb3">Гость торжественного события</label>
                       </div>
                       <div class="form-check">
-                        <input id="cb4" type="checkbox">
+                        <input id="cb4" type="checkbox" name="cb4">
                         <label for="cb4">Корпоративные мероприятия</label>
                       </div>
                       <div class="form-check">
-                        <input id="cb5" type="checkbox">
+                        <input id="cb5" type="checkbox" name="cb5">
                         <label for="cb5">СПА комплекс</label>
                       </div>
                       <div class="form-check">
-                        <input id="cb6" type="checkbox">
+                        <input id="cb6" type="checkbox" name="cb6">
                         <label for="cb6">Конный клуб</label>
                       </div>
                       <div class="form-check">
-                        <input id="cb7" type="checkbox">
+                        <input id="cb7" type="checkbox" name="cb7">
                         <label for="cb7">Сервис</label>
                       </div>
                       <div class="form-check">
-                        <input id="cb8" type="checkbox">
+                        <input id="cb8" type="checkbox" name="cb8">
                         <label for="cb8">Ресторан</label>
                       </div>
                     </div>
                     <div class="book-section-form-line book-section-form-line--text">
                       <p>Другое</p>
-                      <textarea id="form-line-4" name="form-line" placeholder="Ваши предложения/пожелания"></textarea>
+                      <textarea id="form-line-4" name="form-line-4" placeholder="Ваши предложения/пожелания"></textarea>
                     </div>
                   </div>
                   <div class="book-section-form-column">
@@ -574,19 +577,19 @@
                     </div>
                     <fildset class="fildset-radio fildset-radio--age">
                       <div class="form-check">
-                        <input type="radio" id="age1" name="age" val="16-25" checked>
+                        <input type="radio" id="age1" name="age" value="16-25" checked>
                         <label for="age1"> от 16-25</label>
                       </div>
                       <div class="form-check">
-                        <input type="radio" id="age2" name="age" val="26-35">
+                        <input type="radio" id="age2" name="age" value="26-35">
                         <label for="age2"> от 26-35</label>
                       </div>
                       <div class="form-check">
-                        <input type="radio" id="age3" name="age" val="36-45">
+                        <input type="radio" id="age3" name="age" value="36-45">
                         <label for="age3"> 36-45</label>
                       </div>
                       <div class="form-check">
-                        <input type="radio" id="age4" name="age" val="55">
+                        <input type="radio" id="age4" name="age" value="55">
                         <label for="age4"> от 45 и старше</label>
                       </div>
                     </fildset>
@@ -595,14 +598,14 @@
                     </div>
                     <fildset class="fildset-radio fildset-radio--sex">
                       <div class="form-check">
-                        <input type="radio" id="man" name="sex" val="man">
+                        <input type="radio" id="man" name="sex" value="man">
                         <label for="man"> Мужчина</label>
                         <svg>
                           <use xlink:href="#Union"></use>
                         </svg>
                       </div>
                       <div class="form-check">
-                        <input type="radio" id="frau" name="sex" val="frau">
+                        <input type="radio" id="frau" name="sex" value="frau">
                         <label for="frau"> Женщина</label>
                         <svg>
                           <use xlink:href="#Union"></use>
@@ -633,7 +636,7 @@
                 <p class="form-fild-text">Это поможет сделать ваш отдых именно таким как вы того желаете</p>
                 <p class="form-fild-text form-fild-text--green">Все пожелания и предложения вы можете сообщить по номеру телефона <a href="#!">+7 (961)511-66-14</a></p>
               </div>
-            </forma>
+            </form>
           </div>
         </div>
       </section>
